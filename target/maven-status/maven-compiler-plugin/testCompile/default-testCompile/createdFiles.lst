@@ -1,0 +1,5 @@
+com\attendance\manager\AttendanceManagerApplicationTests.class
+com\attendance\manager\testservices\TestEmployeServices.class
+com\attendance\manager\testcontroller\TestAttendanceController.class
+com\attendance\manager\testservices\TestAttendenceService.class
+com\attendance\manager\testcontroller\TestEmployeeController.class
