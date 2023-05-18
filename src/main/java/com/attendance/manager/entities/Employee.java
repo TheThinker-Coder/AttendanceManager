@@ -11,6 +11,7 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,7 @@ public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "e_id")
+	@JsonInclude(JsonInclude.Include.NON_NULL)
 	private int id;
 	private String employeeName;
 	
@@ -31,7 +33,6 @@ public class Employee {
 	private String contactNumber;
 	
 	@OneToMany(mappedBy = "employee")
-	@JsonIgnore
 	private List<Attendance> attendence;
 	
 //	public Employee() {
